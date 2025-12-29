@@ -1,0 +1,17 @@
+[Unit]
+Description=Veles Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=veles
+WorkingDirectory=/home/veles/velес
+ExecStart=/home/veles/velес/venv/bin/python3 /home/veles/velес/bot.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=veles-bot
+
+[Install]
+WantedBy=multi-user.target

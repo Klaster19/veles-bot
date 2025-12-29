@@ -66,6 +66,35 @@ source venv/bin/activate && python3 bot.py -v
    ./daemon.sh daemon
    ```
 
+### Запуск в качестве системного сервиса
+
+Для запуска бота в качестве системного сервиса используйте systemd:
+
+1. Запустить сервис:
+   ```
+   sudo systemctl start veles-bot
+   ```
+
+2. Остановить сервис:
+   ```
+   sudo systemctl stop veles-bot
+   ```
+
+3. Перезапустить сервис:
+   ```
+   sudo systemctl restart veles-bot
+   ```
+
+4. Проверить статус сервиса:
+   ```
+   sudo systemctl status veles-bot
+   ```
+
+5. Просмотр логов сервиса:
+   ```
+   sudo journalctl -u veles-bot -f
+   ```
+
 ## Файлы
 
 - `bot.py` - основной скрипт бота
@@ -74,6 +103,7 @@ source venv/bin/activate && python3 bot.py -v
 - `requirements.txt` - зависимости проекта
 - `install.sh` - скрипт установки зависимостей
 - `daemon.sh` - скрипт управления демоном
+- `veles-bot.service` - файл системного сервиса
 - `.env.example` - пример файла конфигурации
 - `.gitignore` - файлы, исключаемые из Git
 - `README.md` - этот файл

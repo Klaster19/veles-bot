@@ -57,3 +57,18 @@ fi
 
 echo "Для запуска бота используйте команду:"
 echo "source venv/bin/activate && python3 bot.py"
+
+# Копирование файла сервиса в системную директорию
+echo "Установка системного сервиса..."
+sudo cp veles-bot.service /etc/systemd/system/
+sudo chown root:root /etc/systemd/system/veles-bot.service
+sudo chmod 644 /etc/systemd/system/veles-bot.service
+
+# Перезагрузка конфигурации systemd
+sudo systemctl daemon-reload
+
+# Включение сервиса
+sudo systemctl enable veles-bot.service
+
+echo "Сервис установлен. Для запуска используйте команду:"
+echo "sudo systemctl start veles-bot"
