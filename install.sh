@@ -58,9 +58,16 @@ fi
 echo "Для запуска бота используйте команду:"
 echo "source venv/bin/activate && python3 bot.py"
 
+# Создание директории /bin/veles и копирование файлов
+echo "Копирование файлов в /bin/veles..."
+sudo mkdir -p /bin/veles
+sudo cp -r . /bin/veles/
+sudo chown -R root:root /bin/veles
+sudo chmod -R 755 /bin/veles
+
 # Копирование файла сервиса в системную директорию
 echo "Установка системного сервиса..."
-sudo cp veles-bot.service /etc/systemd/system/
+sudo cp /bin/veles/veles-bot.service /etc/systemd/system/
 sudo chown root:root /etc/systemd/system/veles-bot.service
 sudo chmod 644 /etc/systemd/system/veles-bot.service
 

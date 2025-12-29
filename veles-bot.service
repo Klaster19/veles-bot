@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=simple
 User=veles
-WorkingDirectory=/home/veles/velес
-ExecStart=/home/veles/velес/venv/bin/python3 /home/veles/velес/bot.py
+WorkingDirectory=/bin/veles
+ExecStart=/bin/veles/venv/bin/python3 /bin/veles/bot.py
 Restart=always
 RestartSec=5
 StandardOutput=journal
