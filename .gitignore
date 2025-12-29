@@ -1,0 +1,31 @@
+# Байт-код Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# Файлы среды
+.env
+.env.local
+.env.*.local
+
+# Логи
+*.log
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Файлы данных бота
+previous_products.txt
+
+# PID и лог файлы демона
+*.pid
+*.log
+
+# Системные файлы macOS
+.DS_Store
