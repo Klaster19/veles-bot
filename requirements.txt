@@ -2,3 +2,7 @@ requests
 beautifulsoup4
 python-telegram-bot[job-queue]
 Pillow
+schedule
+python-dotenv
+selenium
+webdriver-manager
