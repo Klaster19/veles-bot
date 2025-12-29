@@ -15,8 +15,8 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Проверяем наличие pip
-if ! command -v pip3 &> /dev/null; then
-    echo "Ошибка: pip3 не найден. Пожалуйста, установите pip3."
+if ! command -v pip &> /dev/null; then
+    echo "Ошибка: pip не найден. Пожалуйста, установите pip."
     exit 1
 fi
 
